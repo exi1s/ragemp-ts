@@ -5,7 +5,10 @@
 		"format": "prettier --write {src,scripts}/**/*.ts",
 		"build:production": "rollup -c ./scripts/rollup.config.js --environment NODE_ENV:production",
 		"build": "rollup -c ./scripts/rollup.config.js",
-		"watch": "rollup -w -c ./scripts/rollup.config.js"
+		"watch": "rollup -w -c ./scripts/rollup.config.js",
+		"dev": "ragemp-server.exe",
+		"start": "ts-node src/server/database/index.ts",
+		"typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js migration:run"
 	},
 	"repository": {
 		"type": "git",
@@ -25,7 +28,7 @@
 		"@rollup/plugin-replace": "^3.0.0",
 		"@swc/core": "^1.2.118",
 		"@swc/helpers": "^0.3.2",
-		"@types/node": "^16.11.10",
+		"@types/node": "^16.11.21",
 		"builtin-modules": "^3.2.0",
 		"fs-jetpack": "^4.2.0",
 		"prettier": "^2.5.0",
@@ -38,7 +41,11 @@
 	},
 	"dependencies": {
 		"colorette": "^2.0.16",
-		"dotenv": "^10.0.0"
+		"dotenv": "^10.0.0",
+		"mysql": "^2.18.1",
+		"reflect-metadata": "^0.1.13",
+		"ts-node": "^10.4.0",
+		"typeorm": "^0.2.41"
 	},
 	"prettier": {
 		"$schema": "http://json.schemastore.org/prettierrc",

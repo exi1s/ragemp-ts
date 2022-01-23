@@ -70,7 +70,8 @@ function cleanUp() {
 		'client_packages/game_resources/dlcpacks/**/*',
 		'pnpm-lock.yaml',
 		'package-lock.json',
-		'yarn.lock'
+		'yarn.lock',
+		'client_packages/**/*'
 	];
 
 	const removeablePaths = jetpack.find('dist', {
