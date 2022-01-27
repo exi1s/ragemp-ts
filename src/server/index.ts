@@ -1,2 +1,5 @@
-import './setup';
-import "@/database";
+import "@/setup";
+import "@/command";
+// import "@/db";
+import "@/event";
+import "@/modules";

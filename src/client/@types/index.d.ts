@@ -1,9 +1,7 @@
-declare global {
-	interface PlayerMp {
-		customProperty: number;
+// /// <reference path="Button.d.ts" />
 
-		customMethod(): void;
-	}
+declare global {
+	
 }
 
 export {};
